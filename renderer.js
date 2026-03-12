@@ -21,33 +21,45 @@ api.onSetTheme(function(theme) {
 function applyTheme(theme) {
     currentTheme = theme;
     if (theme === 'dark') {
-        document.body.style.background = '#1e1e1e';
+        document.body.style.background = '#1a1a2e';
         document.body.style.color = '#ccc';
-        document.getElementById('toolbar').style.background = '#2d2d2d';
-        document.getElementById('toolbar').style.borderColor = '#444';
-        editor.style.background = '#1e1e1e';
-        editor.style.color = '#ddd';
-        counter.style.color = '#888';
+        document.getElementById('toolbar').style.background = '#252530';
+        document.getElementById('toolbar').style.borderBottom = '2px solid #4ec9b0';
+        editor.style.background = '#1a1a2e';
+        editor.style.color = '#e0e0e0';
+        editor.style.borderLeft = '3px solid #4ec9b0';
+        counter.style.color = '#4ec9b0';
         themeBtn.textContent = 'Theme clair';
-        document.querySelectorAll('#toolbar button').forEach(function(btn) {
-            btn.style.background = '#3a3a3a';
-            btn.style.color = '#ccc';
-            btn.style.borderColor = '#555';
-        });
+        var buttons = document.querySelectorAll('#toolbar button');
+        buttons[0].style.background = '#2a4a44';
+        buttons[0].style.color = '#4ec9b0';
+        buttons[0].style.borderColor = '#4ec9b0';
+        buttons[1].style.background = '#4ec9b0';
+        buttons[1].style.color = '#1a1a2e';
+        buttons[1].style.borderColor = '#4ec9b0';
+        buttons[2].style.background = '#2a4a44';
+        buttons[2].style.color = '#4ec9b0';
+        buttons[2].style.borderColor = '#4ec9b0';
     } else {
-        document.body.style.background = '#f5f5f5';
-        document.body.style.color = '#222';
-        document.getElementById('toolbar').style.background = '#e0e0e0';
-        document.getElementById('toolbar').style.borderColor = '#bbb';
-        editor.style.background = '#fff';
-        editor.style.color = '#222';
-        counter.style.color = '#666';
+        document.body.style.background = '#f0f4f8';
+        document.body.style.color = '#2d3748';
+        document.getElementById('toolbar').style.background = '#fff';
+        document.getElementById('toolbar').style.borderBottom = '2px solid #e67e22';
+        editor.style.background = '#ffffff';
+        editor.style.color = '#2d3748';
+        editor.style.borderLeft = '3px solid #e67e22';
+        counter.style.color = '#e67e22';
         themeBtn.textContent = 'Theme sombre';
-        document.querySelectorAll('#toolbar button').forEach(function(btn) {
-            btn.style.background = '#d0d0d0';
-            btn.style.color = '#222';
-            btn.style.borderColor = '#aaa';
-        });
+        var buttons = document.querySelectorAll('#toolbar button');
+        buttons[0].style.background = '#fdf2e9';
+        buttons[0].style.color = '#d35400';
+        buttons[0].style.borderColor = '#e67e22';
+        buttons[1].style.background = '#e67e22';
+        buttons[1].style.color = '#fff';
+        buttons[1].style.borderColor = '#e67e22';
+        buttons[2].style.background = '#fdf2e9';
+        buttons[2].style.color = '#d35400';
+        buttons[2].style.borderColor = '#e67e22';
     }
 }
 
